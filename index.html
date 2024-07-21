@@ -6,15 +6,16 @@
   <title>Web Design Company</title>
   <link href="public/styles.css" rel="stylesheet">
   <style>
-   body {
-      overflow: hidden;
+  body {
       margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
     .star {
       position: absolute;
       background: white;
       border-radius: 50%;
-      opacity: 0.8;
+      opacity: 0;
     }
     .hero {
       position: relative;
@@ -25,6 +26,7 @@
       color: white;
       text-align: center;
       background-color: black;
+      overflow: hidden;
     }
     .starfield-settings {
       z-index: 10;
@@ -51,11 +53,23 @@
     <div class="starfield-settings absolute top-0 right-0 m-4 p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg w-64">
       <h2 class="text-lg font-bold mb-4">Starfield Settings</h2>
       <label class="block mb-2">Number of Stars</label>
-      <input id="numStars" type="number" min="10" max="500" value="100" class="mb-4 p-2 w-full bg-gray-700 rounded">
+      <input id="numStars" type="number" min="10" max="1000" value="100" class="mb-4 p-2 w-full bg-gray-700 rounded">
       <label class="block mb-2">Star Size</label>
       <input id="starSize" type="range" min="1" max="5" value="2" class="mb-4 w-full">
       <label class="block mb-2">Brightness</label>
       <input id="brightness" type="range" min="0.1" max="1" step="0.1" value="0.8" class="mb-4 w-full">
+      <label class="block mb-2">Star Color</label>
+      <input id="starColor" type="color" value="#ffffff" class="mb-4 w-full">
+      <label class="block mb-2">Easing</label>
+      <select id="easing" class="mb-4 p-2 w-full bg-gray-700 rounded">
+        <option value="power1.inOut">Power1 InOut</option>
+        <option value="power2.inOut">Power2 InOut</option>
+        <option value="power3.inOut">Power3 InOut</option>
+        <option value="power4.inOut">Power4 InOut</option>
+        <option value="back.inOut">Back InOut</option>
+        <option value="elastic.inOut">Elastic InOut</option>
+        <option value="bounce.inOut">Bounce InOut</option>
+      </select>
       <button id="applySettings" class="p-2 w-full bg-blue-500 rounded hover:bg-blue-600">Apply</button>
     </div>
     <div class="z-10">
