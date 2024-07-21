@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Design Company</title>
+  <link href="dist/tailwind.css" rel="stylesheet">
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+    }
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background-color: black;
+    }
+    .starfield-settings {
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <header class="bg-gray-800 p-4 fixed w-full z-20 top-0 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">WebDesignCo</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:text-gray-400">About</a>
+        <a href="#services" class="hover:text-gray-400">Services</a>
+        <a href="#portfolio" class="hover:text-gray-400">Portfolio</a>
+        <a href="#contact" class="hover:text-gray-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="starfield"></div>
+    <div class="starfield-settings absolute top-0 right-0 m-4 p-4 bg-gray-800 bg-opacity-70 rounded-lg shadow-lg w-64">
+      <h2 class="text-lg font-bold mb-4">Starfield Settings</h2>
+      <label class="block mb-2">Number of Stars</label>
+      <input id="numStars" type="number" min="10" max="500" value="100" class="mb-4 p-2 w-full bg-gray-700 rounded">
+      <label class="block mb-2">Star Size</label>
+      <input id="starSize" type="range" min="1" max="5" value="2" class="mb-4 w-full">
+      <label class="block mb-2">Brightness</label>
+      <input id="brightness" type="range" min="0.1" max="1" step="0.1" value="0.8" class="mb-4 w-full">
+      <button id="applySettings" class="p-2 w-full bg-blue-500 rounded hover:bg-blue-600">Apply</button>
+    </div>
+    <div class="z-10">
+      <h2 class="text-5xl font-bold">Welcome to WebDesignCo</h2>
+      <p class="text-xl mt-4">Crafting beautiful and functional websites</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">About Us</h2>
+      <p class="mt-4 text-gray-400">We are a team of passionate web designers and developers dedicated to creating stunning websites.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-900">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Our Services</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <h3 class="text-xl font-bold">Web Design</h3>
+          <p class="mt-2 text-gray-400">Creating beautiful, user-friendly designs for your website.</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <h3 class="text-xl font-bold">Development</h3>
+          <p class="mt-2 text-gray-400">Building responsive and functional websites with the latest technologies.</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded-lg">
+          <h3 class="text-xl font-bold">SEO</h3>
+          <p class="mt-2 text-gray-400">Optimizing your website to rank higher on search engines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Our Portfolio</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-4 bg-gray-900 rounded-lg">
+          <img src="https://via.placeholder.com/300" alt="Project 1" class="w-full rounded-lg">
+          <h3 class="text-xl font-bold mt-4">Project 1</h3>
+        </div>
+        <div class="p-4 bg-gray-900 rounded-lg">
+          <img src="https://via.placeholder.com/300" alt="Project 2" class="w-full rounded-lg">
+          <h3 class="text-xl font-bold mt-4">Project 2</h3>
+        </div>
+        <div class="p-4 bg-gray-900 rounded-lg">
+          <img src="https://via.placeholder.com/300" alt="Project 3" class="w-full rounded-lg">
+          <h3 class="text-xl font-bold mt-4">Project 3</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-900">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Contact Us</h2>
+      <form class="mt-8 max-w-lg mx-auto">
+        <input type="text" placeholder="Name" class="block w-full p-3 mb-4 bg-gray-800 rounded">
+        <input type="email" placeholder="Email" class="block w-full p-3 mb-4 bg-gray-800 rounded">
+        <textarea placeholder="Message" class="block w-full p-3 mb-4 bg-gray-800 rounded"></textarea>
+        <button class="w-full p-3 bg-blue-500 rounded hover:bg-blue-600">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-4 text-center">
+    <div class="container mx-auto">
+      <p>&copy; 2024 WebDesignCo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Observer.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
